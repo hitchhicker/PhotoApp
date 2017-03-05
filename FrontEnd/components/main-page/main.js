@@ -1,8 +1,8 @@
 /**
  * Created by Zhengqin YAN on 03/03/17.
  */
+
 $(document).ready(function() {
-    $('#login-page').load('components/login-page/login.html', function() {
-        console.log('Hello!');
-    });
+    console.log("Wait!");
+    $('#text-after-login').text('Welcome ' + Cookies.get('user-name'));
 });
