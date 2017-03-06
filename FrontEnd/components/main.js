@@ -1,6 +1,4 @@
-/**
- * Created by user on 04/03/17.
- */
+/* Created by user on 04/03/17. */
 
 /* Check if Cookie contains login information in current browser */
 function ifLogin() {
@@ -11,14 +9,14 @@ function ifLogin() {
     return false;
 }
 
-/* Initialize the main page */
+/* Initialize the app page */
 $(document).ready(function() {
     if (ifLogin()){
-        $("#main-page").load("components/main-page/main.html", function() {
-            $('#main-page').show();
+        $("#app-page #main-panel").load("components/hello/hello.html", function() {
+            $('#app-page').show();
         });
     } else {
-        $("#login-page").load("components/login-page/login.html", function() {
+        $("#login-page").load("components/login/login.html", function() {
             $('#login-page').show();
         });
     }
