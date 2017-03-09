@@ -1,4 +1,7 @@
-/* Created by user on 03/03/17. */
+/**
+ * Created by Z YAN on 09/03/17.
+ */
+'use strict';
 $(document).ready(function(){
     /* Attach click event to button 'submit-login' */
     $('#submit-login').click(function(){
