@@ -3,7 +3,16 @@
  */
 'use strict';
 $(document).ready(function() {
-    var app = {};
-    window.app = app;
+    /* Define window.app as global controller*/
+    window.app = {};
+
+    /* Add the necessary functions from functions.js */
+    window.app.ifLogin = ifLogin;
+    window.app.checkIfLoginValid = checkIfLoginValid;
+    window.app.initMainPage = initMainPage;
+    window.app.switchMainPage = switchMainPage;
+
+
     $('#background #main-page').load('components/main.html');
+
 });

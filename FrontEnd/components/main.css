@@ -8,3 +8,17 @@
 #app-page {
     display: none;
 }
+
+#app-page #main-panel {
+    border-radius: 25px;
+    border: 2px solid darkseagreen;
+    padding: 20px;
+    margin: 20px;
+}
+
+#app-page #menu-panel {
+    border-radius: 25px;
+    border: 2px solid darkseagreen;
+    padding: 20px;
+    margin: 20px;
+}
