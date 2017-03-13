@@ -4,3 +4,7 @@
 #request-photo-title {
     background-color: darkseagreen;
 }
+#request-photo-image-container {
+    border-style: solid;
+    border-width: 2px;
+}

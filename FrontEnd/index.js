@@ -9,6 +9,7 @@ $(document).ready(function() {
     /* Add the necessary functions from functions.js */
     window.app.ifLogin = ifLogin;
     window.app.checkIfLoginValid = checkIfLoginValid;
+    window.app.requestPhotoUrl = requestPhotoUrl;
     window.app.initMainPage = initMainPage;
     window.app.switchMainPage = switchMainPage;
 

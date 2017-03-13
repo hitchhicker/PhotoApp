@@ -2,8 +2,9 @@
  * Created by Z YAN on 11/03/17.
  */
 'use strict';
-/* Check if Cookie contains login information in current browser */
-/* Return : true if Cookie contains login info ; otherwise false */
+/*  Check if Cookie contains login information in current browser
+    Return : true if Cookie contains login info ; otherwise false
+*/
 var ifLogin = function() {
     console.log('[ifLogin] User name from cookies: ' + Cookies.get('user-name'));
     if (Cookies.get('user-name') !== undefined && Cookies.get('user-password') !== undefined) {
@@ -12,13 +13,14 @@ var ifLogin = function() {
     return false;
 };
 
-/* Check if the login information that user inputs is correct */
-/* Params "email" : input user email */
-/* Params "password" : input user password */
-/* Params "callback" : function to be called when we know if the login information is valid or not */
-/* Return : true if check process succeed, otherwise false */
+/*  Using HTTP GET req to check if the login information that user inputs is correct
+    Params "email" : input user email
+    Params "password" : input user password
+    Params "callback" : function to be called when we know if the login information is valid or not
+    Return : true if check process succeed, otherwise false
+*/
 var checkIfLoginValid = function(email, password, callback) {
-    $.getJSON("./assets/fakeDB.json", function(data, status){
+    $.getJSON("./assets/fakeDB/users.json", function(data, status){
         for (var i=0; i<data.users.length; i++) {
             if (data.users[i].email == email && data.users[i].password == password) {
                 //Add the user login information into cookies
@@ -35,9 +37,19 @@ var checkIfLoginValid = function(email, password, callback) {
     });
 };
 
-/* Switch between app-page and login-page */
-/* Params "flag" : a string indicates the page which we will switch to */
-/* Return : true if toggling succeed, otherwise false */
+/*  Using HTTP GET req to return a photo url from Server
+
+*/
+var requestPhotoUrl = function(callback) {
+    var photo_url = "./assets/fakeDB/photos/fakePhoto.jpg";
+    callback(photo_url);
+
+};
+
+/*  Switch between app-page and login-page
+    Params "flag" : a string indicates the page which we will switch to
+    Return : true if toggling succeed, otherwise false
+*/
 var switchMainPage = function(flag) {
     if (flag === 'app-page') {
         $('#login-page').hide();
@@ -51,8 +63,9 @@ var switchMainPage = function(flag) {
     return false;
 };
 
-/* Initialize the page by checking the cookies and then loading the corresponding component */
-/* Return : true if initialization succeed, otherwise false */
+/*  Initialize the page by checking the cookies and then loading the corresponding component
+    Return : true if initialization succeed, otherwise false
+*/
 var initMainPage = function() {
     if (ifLogin()){
         $("#app-page #main-panel").load("components/postPhoto/postPhoto.html", function() {
