@@ -14,6 +14,6 @@ $(document).ready(function() {
     window.app.switchMainPage = switchMainPage;
 
 
-    $('#background #main-page').load('components/main.html');
+    $('#main-page').load('components/main.html');
 
 });
