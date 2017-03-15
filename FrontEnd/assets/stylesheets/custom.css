@@ -1,0 +1,32 @@
+/**
+ * Created by Z YAN on 15/03/17.
+ */
+/* Containers */
+.custom-flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 250px;
+}
+
+.custom-flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+/* Card styles */
+.custom-card-2 {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important
+}
+.custom-card-4,.custom-slight-hover-shadow:hover {
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important
+}
+.custom-card-8,.custom-heavy-hover-shadow:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important
+}
+/* Layouts and positions */
+.custom-horizontal-center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
