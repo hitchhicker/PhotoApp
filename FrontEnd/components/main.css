@@ -3,6 +3,8 @@
  */
 #login-page {
     display: none;
+    width: 60%;
+    margin-top: 80px;
 }
 
 #app-page {
