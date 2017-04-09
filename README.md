@@ -1,5 +1,5 @@
 ## Docker set-up
-1. docker build -t photoApp
+1. docker build -t photoApp .
 2. modify run.sh
 3. source run.sh/
 ## Debug
