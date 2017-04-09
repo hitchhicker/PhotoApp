@@ -4,8 +4,8 @@
 DATABASE = {
     'drivername': 'postgresql',
     'database': 'photoapp',
-    'user': 'postgres',
-    'password': 'asd123zxc',
+    'user': 'admin',
+    'password': 'pass',
     'host': 'localhost',
     'port': '5432',
 }
