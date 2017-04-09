@@ -1,0 +1,42 @@
+/**
+ * Created by Z YAN on 09/03/17.
+ */
+/*html,body {
+    background: url(./assets/images/background-images/background3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.5;
+}
+body {
+    height: 100%;
+    width: 100%;
+}*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main-page {
+    height: 100%;
+    width: 100%;
+}
+
+/* Set full-screen background image and set its opacity */
+#main-page:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(./assets/images/background-images/background3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.5;
+}

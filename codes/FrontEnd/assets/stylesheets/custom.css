@@ -1,0 +1,81 @@
+/**
+ * Created by Z YAN on 15/03/17.
+ */
+/* Containers */
+.full-screen-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.custom-flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 250px;
+}
+
+.custom-flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+/* Card styles */
+.custom-card-2 {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important
+}
+.custom-card-4,.custom-slight-hover-shadow:hover {
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important
+}
+.custom-card-8,.custom-heavy-hover-shadow:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important
+}
+/* Layouts and positions */
+.custom-horizontal-center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid system (12 cols for each row) */
+.custom-row:after,.custom-row:before {
+    clear:both;
+}
+.custom-col {float:left;width:100%}
+.custom-col.s1 {width:8.33333%}
+.custom-col.s2 {width:16.66666%}
+.custom-col.s3 {width:24.99999%}
+.custom-col.s4 {width:33.33333%}
+.custom-col.s5 {width:41.66666%}
+.custom-col.s6 {width:49.99999%}
+.custom-col.s7 {width:58.33333%}
+.custom-col.s8 {width:66.66666%}
+.custom-col.s9 {width:74.99999%}
+.custom-col.s10 {width:83.33333%}
+.custom-col.s11 {width:91.66666%}
+.custom-col.s12 {width:99.99999%}
+@media (min-width:601px){
+    .custom-col.m1 {width:8.33333%}
+    .custom-col.m2 {width:16.66666%}
+    .custom-col.m3 {width:24.99999%}
+    .custom-col.m4 {width:33.33333%}
+    .custom-col.m5 {width:41.66666%}
+    .custom-col.m6 {width:49.99999%}
+    .custom-col.m7 {width:58.33333%}
+    .custom-col.m8 {width:66.66666%}
+    .custom-col.m9 {width:74.99999%}
+    .custom-col.m10 {width:83.33333%}
+    .custom-col.m11 {width:91.66666%}
+    .custom-col.m12 {width:99.99999%}}
+@media (min-width:993px){
+    .custom-col.l1 {width:8.33333%}
+    .custom-col.l2 {width:16.66666%}
+    .custom-col.l3 {width:24.99999%}
+    .custom-col.l4 {width:33.33333%}
+    .custom-col.l5 {width:41.66666%}
+    .custom-col.l6 {width:49.99999%}
+    .custom-col.l7 {width:58.33333%}
+    .custom-col.l8 {width:66.66666%}
+    .custom-col.l9 {width:74.99999%}
+    .custom-col.l10 {width:83.33333%}
+    .custom-col.l11 {width:91.66666%}
+    .custom-col.l12 {width:99.99999%}}
