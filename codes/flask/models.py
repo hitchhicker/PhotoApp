@@ -48,9 +48,9 @@ class Photo(Base):
 #     creator = relationship('User', foreign_keys=[created_by])
 
 
-class UserViewPhoto(Base):
+class UserViewsPhoto(Base):
     """Sqlalchemy UserViewPhoto model"""
-    __tablename__ = 'activity'
+    __tablename__ = 'user_views_photo'
     query = db_session.query_property()
 
     id = Column(Integer, Sequence('_photo_id_seq'), primary_key=True)
@@ -64,7 +64,7 @@ class UserViewPhoto(Base):
 
 class UserCollectsPhoto(Base):
     """Sqlalchemy UserCollectsPhoto model"""
-    __tablename__ = 'activity'
+    __tablename__ = 'user_collects_photo'
     query = db_session.query_property()
 
     id = Column(Integer, Sequence('activity_id_seq'), primary_key=True)

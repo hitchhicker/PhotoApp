@@ -12,11 +12,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN sudo apt-get update
-RUN sudo apt-get -y install python3-pip
+RUN sudo apt-get install -y python3-pip
 
 RUN export CC=gcc
-
-RUN sudo apt-get install -y postgresql postgresql-contrib
 
 RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 RUN echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
@@ -30,6 +28,8 @@ RUN sudo apt-get install -y python3-psycopg2
 RUN sudo apt-get install -y python-pip
 RUN sudo apt-get install -y wget
 
+RUN sudo apt-get install -y postgresql postgresql-contrib libpq-dev
+
 RUN mkdir -p /var/www/photoApp
 WORKDIR /var/www/photoApp
 
@@ -42,8 +42,9 @@ RUN pip3 install -r requirements.txt
 ADD init.sh .
 ADD nginx.conf .
 ADD uwsgi.ini .
+ADD python34_plugin.so .
 
 RUN sudo bash init.sh
 ENV PATH /usr/bin/python3.4:$PATH:
 
-CMD sudo /bin/bash -c "service nginx start; uwsgi --ini uwsgi.ini;"
+CMD sudo /bin/bash -c "/etc/init.d/postgresql start; service nginx start; uwsgi --ini uwsgi.ini;"
