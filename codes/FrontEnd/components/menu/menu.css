@@ -1,3 +1,76 @@
 /**
  * Created by Z YAN on 09/03/17.
  */
+#menu-container {
+    height: 100%;
+}
+.menu-btn {
+    height: 100%;
+    padding-top: 50px;
+}
+.menu-btn-text {
+    margin-top: 50px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.menu-btn:hover {
+    color: #269abc;
+    background-color: white;
+}
+
+@media (max-height:1000px){
+    .menu-btn {
+        padding-top: 40px;
+    }
+    .menu-btn-text {
+        font-size: x-large;
+    }
+}
+
+@media (max-height:800px){
+    .menu-btn {
+        padding-top: 30px;
+    }
+    .menu-btn-text {
+        font-size: large;
+    }
+}
+
+@media (max-height:750px){
+    .menu-btn {
+        padding-top: 20px;
+    }
+}
+
+@media (max-height:600px){
+    .menu-btn {
+        padding-top: 10px;
+    }
+    .menu-btn-text {
+        font-size: medium;
+    }
+}
+
+@media (max-width:800px){
+    .menu-btn-text {
+        font-size: x-large;
+    }
+}
+
+@media (max-width:450px){
+    .menu-btn-text {
+        font-size: large;
+    }
+}
+
+@media (max-width:400px){
+    .menu-btn-text {
+        font-size: medium;
+    }
+}
+
+@media (max-width:350px){
+    .menu-btn-text {
+        font-size: small;
+    }
+}

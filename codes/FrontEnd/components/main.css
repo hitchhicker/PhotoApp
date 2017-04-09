@@ -3,24 +3,24 @@
  */
 #login-page {
     display: none;
-    width: 60%;
-    margin-top: 80px;
+    width: 40%;
+    margin-top: 10%;
+    padding:5px;
+    background-color: #269abc;
+    color: #a6e1ec;
+    font-weight:bold;
+}
+
+@media (max-width:600px){
+    #login-page {
+        width: 80%;
+    }
 }
 
 #app-page {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
-#app-page #main-panel {
-    border-radius: 25px;
-    border: 2px solid darkseagreen;
-    padding: 20px;
-    margin: 20px;
-}
 
-#app-page #menu-panel {
-    border-radius: 25px;
-    border: 2px solid darkseagreen;
-    padding: 20px;
-    margin: 20px;
-}

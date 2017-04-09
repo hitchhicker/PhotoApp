@@ -5,7 +5,7 @@
 /*
 *
 * */
-var rootUrl = '/codes/FrontEnd/';
+var rootUrl = '/FrontEnd/';
 
 /*  Check if Cookie contains login information in current browser
     Return : true if Cookie contains login info ; otherwise false
@@ -76,15 +76,6 @@ var initMainPage = function() {
         $("#app-page #main-panel").load(rootUrl + "components/postPhoto/postPhoto.html", function() {
             switchMainPage('app-page');
             $("#app-page #menu-panel").load(rootUrl + "components/menu/menu.html");
-        });
-        $('#logout-btn').click(function(){
-            $("#login-page").load(rootUrl + "components/login/login.html", function() {
-                switchMainPage('login-page');
-                //Remove the user login information from cookies
-                Cookies.remove('user-name');
-                Cookies.remove('user-email');
-                Cookies.remove('user-password');
-            });
         });
         return true
     } else {
