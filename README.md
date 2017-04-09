@@ -2,7 +2,7 @@
 1. docker build -t photoapp .
 2. modify run.sh
 3. source run.sh
-4. [Optional] source debug.sh [Debug inside in bash]
+4. [Optional] source debug.sh [Debug in bash]
 ## Debug
 * OS X:
   * docker-machine ip -> get \[ip\]
