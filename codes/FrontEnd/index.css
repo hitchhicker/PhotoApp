@@ -13,10 +13,13 @@ body {
     height: 100%;
     width: 100%;
 }*/
-
 html, body {
     height: 100%;
     width: 100%;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 #main-page {
@@ -33,7 +36,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(./assets/images/background-images/background3.jpg) no-repeat center center fixed;
+    background: url(/codes/FrontEnd/assets/images/background-images/background3.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

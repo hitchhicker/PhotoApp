@@ -6,8 +6,8 @@ $(document).ready(function() {
     /* Define window.app as global controller*/
     window.app = {};
 
-    /* Add the global functions from functions.js */
-    window.app.getRootUrl = getRootUrl;
+    /* Add the global & general functions from functions.js */
+    window.app.rootUrl = rootUrl;
     window.app.ifLogin = ifLogin;
     window.app.checkIfLoginValid = checkIfLoginValid;
     window.app.requestPhotoUrl = requestPhotoUrl;
@@ -15,6 +15,6 @@ $(document).ready(function() {
     window.app.switchMainPage = switchMainPage;
 
 
-    $('#main-page').load(window.app.getRootUrl() + 'components/main.html');
+    $('#main-page').load(window.app.rootUrl + 'components/main.html');
 
 });

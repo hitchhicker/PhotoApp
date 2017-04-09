@@ -5,9 +5,7 @@
 /*
 *
 * */
-var getRootUrl = function() {
-    return '/FrontEnd/';
-};
+var rootUrl = '/codes/FrontEnd/';
 
 /*  Check if Cookie contains login information in current browser
     Return : true if Cookie contains login info ; otherwise false
@@ -27,7 +25,7 @@ var ifLogin = function() {
     Return : true if check process succeed, otherwise false
 */
 var checkIfLoginValid = function(email, password, callback) {
-    $.getJSON(getRootUrl() + "/assets/fakeDB/users.json", function(data, status){
+    $.getJSON(rootUrl + "/assets/fakeDB/users.json", function(data, status){
         for (var i=0; i<data.users.length; i++) {
             if (data.users[i].email == email && data.users[i].password == password) {
                 //Add the user login information into cookies
@@ -48,7 +46,7 @@ var checkIfLoginValid = function(email, password, callback) {
 
 */
 var requestPhotoUrl = function(callback) {
-    var photo_url = getRootUrl() + "/assets/fakeDB/photos/fakePhoto.jpg";
+    var photo_url = rootUrl + "/assets/fakeDB/photos/fakePhoto.jpg";
     callback(photo_url);
 
 };
@@ -75,12 +73,12 @@ var switchMainPage = function(flag) {
 */
 var initMainPage = function() {
     if (ifLogin()){
-        $("#app-page #main-panel").load(getRootUrl() + "components/postPhoto/postPhoto.html", function() {
+        $("#app-page #main-panel").load(rootUrl + "components/postPhoto/postPhoto.html", function() {
             switchMainPage('app-page');
-            $("#app-page #menu-panel").load(getRootUrl() + "components/menu/menu.html");
+            $("#app-page #menu-panel").load(rootUrl + "components/menu/menu.html");
         });
         $('#logout-btn').click(function(){
-            $("#login-page").load(getRootUrl() + "components/login/login.html", function() {
+            $("#login-page").load(rootUrl + "components/login/login.html", function() {
                 switchMainPage('login-page');
                 //Remove the user login information from cookies
                 Cookies.remove('user-name');
@@ -90,7 +88,7 @@ var initMainPage = function() {
         });
         return true
     } else {
-        $("#login-page").load(getRootUrl() + "components/login/login.html", function() {
+        $("#login-page").load(rootUrl + "components/login/login.html", function() {
             switchMainPage('login-page');
         });
         return true;
