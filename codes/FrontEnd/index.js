@@ -5,7 +5,6 @@
 $(document).ready(function() {
     /* Define window.app as global controller*/
     window.app = {};
-
     /* Add the global & general functions from functions.js */
     window.app.rootUrl = rootUrl;
     window.app.ifLogin = ifLogin;
@@ -14,6 +13,10 @@ $(document).ready(function() {
     window.app.initMainPage = initMainPage;
     window.app.switchMainPage = switchMainPage;
 
+    /* Define window.app as global controller*/
+    window.api = {};
+    /* Add the global & general functions from functions.js */
+    window.api.apiRootUrl = apiRootUrl;
 
     $('#main-page').load(window.app.rootUrl + 'components/main.html');
 

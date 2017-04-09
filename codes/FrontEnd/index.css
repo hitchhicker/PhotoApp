@@ -13,13 +13,20 @@ body {
     height: 100%;
     width: 100%;
 }*/
-html, body {
-    height: 100%;
-    width: 100%;
-}
 
 * {
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
 }
 
 #main-page {
@@ -28,7 +35,7 @@ html, body {
 }
 
 /* Set full-screen background image and set its opacity */
-#main-page:before {
+#main-page:after {
     content: "";
     position: absolute;
     z-index: -1;
