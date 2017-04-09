@@ -3,10 +3,10 @@
 2. modify run.sh
 3. source run.sh
 ## Debug
-* OS X:<br/>
- 1. docker-machine ip -> get \[ip\]
- 2. \[ip\]:80
-* Ubuntu:<br />
- localhost:80
+* OS X:
+  * docker-machine ip -> get \[ip\]
+  * \[ip\]:80 
+* Ubuntu:
+  * localhost:80
 ## Server log
 tail -f logs/error.log
