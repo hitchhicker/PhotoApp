@@ -1,0 +1,1 @@
+docker run --rm --net=host -v $(pwd)/codes:/var/www/photoApp/codes -v $(pwd)/logs:/var/www/photoApp/logs -ti photoapp /bin/bash
