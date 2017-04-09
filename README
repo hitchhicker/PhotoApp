@@ -1,3 +1,0 @@
- 1. build -t test .
- 2. modify run.sh to adapter to your OS
- 3. source run.sh
