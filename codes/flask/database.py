@@ -1,12 +1,16 @@
 """connect to postgresql."""
 # -*- coding: utf-8 -*-
-from setting import DATABASE as DB
+from setting import DATABASE, DATABASE_TESTING
 
 from sqlalchemy import MetaData, create_engine
 
 from sqlalchemy.ext.declarative import declarative_base
 
 from sqlalchemy.orm import scoped_session, sessionmaker
+
+from photoapp import *
+
+DB = DATABASE_TESTING if app.config['TESTING'] else DATABASE
 
 engine = create_engine('postgresql://%s:%s@%s/%s' % (
     DB['user'],
@@ -23,11 +27,3 @@ db_session = scoped_session(sessionmaker(
     autocommit=False,
     autoflush=False,
     bind=engine))
-
-
-def init_db():
-    import models
-    Base.metadata.create_all(bind=engine)
-
-
-# sudo -u postgres bash -c "psql -c \"CREATE USER admin WITH PASSWORD 'pass';\""

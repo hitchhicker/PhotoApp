@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer, Sequence, Column, ForeignKey
-from sqlalchemy.types import VARCHAR, CHAR, TIMESTAMP, BOOLEAN, TEXT
+from sqlalchemy.types import VARCHAR, CHAR, TIMESTAMP, TEXT
 from sqlalchemy.orm import relationship
 
 from database import db_session
