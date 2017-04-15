@@ -1,0 +1,16 @@
+/**
+ * Created by Z YAN on 09/03/17.
+ */
+.half-opacity {
+    opacity: 0.5;
+}
+.three-quarters-opacity {
+    opacity: 0.75;
+}
+.one-quarter-opacity {
+    opacity: 0.25;
+}
+.colors-sky-blue-theme {
+    background-color: #269abc;
+    color: white;
+}

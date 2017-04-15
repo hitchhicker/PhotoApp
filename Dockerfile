@@ -32,6 +32,7 @@ RUN sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
 RUN mkdir -p /var/www/photoApp
 WORKDIR /var/www/photoApp
+env PYTHONPATH /var/www/photoApp/codes/flask/
 
 RUN mkdir logs
 RUN mkdir codes
@@ -43,6 +44,7 @@ ADD init.sh .
 ADD nginx.conf .
 ADD uwsgi.ini .
 ADD python34_plugin.so .
+ADD photoApp.sql .
 
 RUN sudo bash init.sh
 ENV PATH /usr/bin/python3.4:$PATH:

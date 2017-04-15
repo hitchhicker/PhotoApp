@@ -1,3 +1,47 @@
 /**
  * Created by Z YAN on 09/03/17.
  */
+#login-panel {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    font-size: x-large;
+    text-align: center;
+}
+
+#register-panel {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.login-btn {
+    width: 100%;
+    margin: 5px;
+}
+.login-btn:hover {
+    color: #269abc;
+    background-color: #a6e1ec;
+}
+
+@media (max-width:600px){
+    #login-panel {
+        font-size: large;
+    }
+
+    #register-panel {
+        font-size: large;
+    }
+}
+
+@media (max-width:400px){
+    #login-panel {
+        padding: 5px;
+    }
+
+    #register-panel {
+        padding: 5px;
+    }
+}
