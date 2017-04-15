@@ -47,9 +47,9 @@ class UserAdminTestCase(unittest.TestCase):
         rv = self.login(email='byu2@test.com', password='pwd')
         assert rv.data == b'{\n  "message": "Login succeeds", \n  "status": "success"\n}\n'
 
-    def test_login_with_not_registered_user(self):
+    def test_login_with_not_registered_user_or_incorrect_password(self):
         rv = self.login(email='byu3@test.com', password='pwd')
-        assert rv.data == b'{\n  "message": "User not registered", \n  "status": "failure"\n}\n'
+        assert rv.data == b'{\n  "message": "User not registered or password is incorrect", \n  "status": "failure"\n}\n'
 
     def register(self, name, email, password):
         return self.app.post('/register', data=dict(

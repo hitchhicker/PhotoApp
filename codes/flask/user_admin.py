@@ -34,7 +34,7 @@ class UserAdmin:
             pwd_hash = self._get_hash_pwd()
             res = Response(status='success', msg='Login succeeds') \
                 if User.query.filter_by(email=self._email, password=pwd_hash).count() == 1 \
-                else Response(status='failure', msg='User not registered')
+                else Response(status='failure', msg='User not registered or password is incorrect')
             return res.as_json
         else:
             res = Response(status='failure', msg='Input missing')
