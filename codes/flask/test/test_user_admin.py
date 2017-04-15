@@ -17,17 +17,22 @@ class UserAdminTestCase(unittest.TestCase):
         rv = self.register(name='', email='byu@test.com', password='pwd')
         assert rv.data == b'{\n  "message": "Input missing", \n  "status": "failure"\n}\n'
 
-    def test_register_with__empty_email(self):
+    def test_register_with_empty_email(self):
         rv = self.register(name='test', email='', password='pwd')
         assert rv.data == b'{\n  "message": "Input missing", \n  "status": "failure"\n}\n'
 
-    def test_register_with__empty_password(self):
+    def test_register_with_empty_password(self):
         rv = self.register(name='test', email='byu@test.com', password='')
         assert rv.data == b'{\n  "message": "Input missing", \n  "status": "failure"\n}\n'
 
     def test_register_with_right_inputs(self):
         rv = self.register(name='test', email='byu@test.com', password='pwd')
         assert rv.data == b'{\n  "message": "Signup succeeds", \n  "status": "success"\n}\n'
+
+    def test_register_with_user_existed(self):
+        self.register(name='test', email='pig@test.com', password='pwd')
+        rv = self.register(name='test', email='pig@test.com', password='pwd')
+        assert rv.data == b'{\n  "message": "email already existed", \n  "status": "failure"\n}\n'
 
     def test_login_with_empty_email(self):
         rv = self.login(email='', password='pwd')
