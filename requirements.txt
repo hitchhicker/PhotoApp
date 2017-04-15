@@ -6,3 +6,4 @@ SQLAlchemy
 uWSGI
 mock
 pytest
+flask-cors
