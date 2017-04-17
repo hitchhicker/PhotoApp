@@ -11,6 +11,7 @@
 }
 
 /* Card styles */
+.custom-card{  border:1px solid #ccc}
 .custom-card-2 {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important
 }

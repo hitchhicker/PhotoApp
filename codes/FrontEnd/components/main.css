@@ -1,7 +1,7 @@
 /**
  * Created by Z YAN on 09/03/17.
  */
-#login-page {
+.login-container {
     display: none;
     width: 40%;
     margin-top: 10%;
@@ -9,6 +9,7 @@
     background-color: #269abc;
     color: #a6e1ec;
     font-weight:bold;
+    opacity: 0.9;
 }
 
 @media (max-width:600px){

@@ -37,10 +37,6 @@ $(document).ready(function(){
         }).fail(function(response){
             console.log('[register] ' + response.status + ' ' + response.message);
         });
-
-        // $.post( "http://localhost:81/register", { name: name, email: email, password: password }, function(data){
-        //     console.log('[Register] ' + data);
-        // } );
     });
 
 
