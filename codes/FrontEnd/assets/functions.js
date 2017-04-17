@@ -12,7 +12,7 @@ var rootUrl = '/FrontEnd/';
 */
 var ifLoginInCookies = function() {
     console.log('[ifLoginInCookies()] User name from cookies: ' + Cookies.get('user-name'));
-    if (Cookies.get('user-name') !== undefined && Cookies.get('user-password') !== undefined) {
+    if (Cookies.get('user-name') !== undefined && Cookies.get('user-email') && Cookies.get('user-password') !== undefined) {
         return true;
     }
     return false;
@@ -45,25 +45,6 @@ var switchMainPage = function(flag) {
     } else if (flag === 'login-page') {
         $('#app-page').hide();
         $('#login-page').show();
-        return true;
-    }
-    return false;
-};
-
-/*  Initialize the page by checking the cookies and then loading the corresponding component
-    Return : true if initialization succeed, otherwise false
-*/
-var initMainPage = function() {
-    if (ifLoginInCookies()){
-        $("#app-page #main-panel").load(rootUrl + "components/postPhoto/postPhoto.html", function() {
-            switchMainPage('app-page');
-            $("#app-page #menu-panel").load(rootUrl + "components/menu/menu.html");
-        });
-        return true
-    } else {
-        $("#login-page").load(rootUrl + "components/login/login.html", function() {
-            switchMainPage('login-page');
-        });
         return true;
     }
     return false;

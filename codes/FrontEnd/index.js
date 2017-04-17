@@ -10,7 +10,6 @@ $(document).ready(function() {
     window.app.ifLoginInCookies = ifLoginInCookies;
     window.app.setLoginInCookies = setLoginInCookies;
     window.app.requestPhotoUrl = requestPhotoUrl;
-    window.app.initMainPage = initMainPage;
     window.app.switchMainPage = switchMainPage;
 
     /* Define window.app as global controller*/
@@ -19,7 +18,6 @@ $(document).ready(function() {
     window.api.rootUrl = 'http://localhost:80/';
     window.api.postRegisterData = postRegisterData;
     window.api.postLoginData = postLoginData;
-
 
     $('#main-page').load(window.app.rootUrl + 'components/main.html');
 
