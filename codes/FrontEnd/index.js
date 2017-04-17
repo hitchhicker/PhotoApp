@@ -7,16 +7,17 @@ $(document).ready(function() {
     window.app = {};
     /* Add the global & general functions from functions.js */
     window.app.rootUrl = rootUrl;
-    window.app.ifLogin = ifLogin;
-    window.app.checkIfLoginValid = checkIfLoginValid;
+    window.app.ifLoginInCookies = ifLoginInCookies;
+    window.app.setLoginInCookies = setLoginInCookies;
     window.app.requestPhotoUrl = requestPhotoUrl;
-    window.app.initMainPage = initMainPage;
     window.app.switchMainPage = switchMainPage;
 
     /* Define window.app as global controller*/
     window.api = {};
     /* Add the global & general functions from functions.js */
-    window.api.apiRootUrl = apiRootUrl;
+    window.api.rootUrl = 'http://localhost:80/';
+    window.api.postRegisterData = postRegisterData;
+    window.api.postLoginData = postLoginData;
 
     $('#main-page').load(window.app.rootUrl + 'components/main.html');
 

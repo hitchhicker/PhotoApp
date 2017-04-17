@@ -32,7 +32,7 @@ RUN sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
 RUN mkdir -p /var/www/photoApp
 WORKDIR /var/www/photoApp
-env PYTHONPATH /var/www/photoApp/codes/flask/
+ENV PYTHONPATH /var/www/photoApp/codes/flask/
 
 RUN mkdir logs
 RUN mkdir codes
