@@ -5,6 +5,7 @@ import hashlib
 from database import db_session
 from models import User
 from response import Response
+from sqlalchemy.orm.exc import NoResultFound
 
 
 class UserAdmin:
@@ -20,24 +21,26 @@ class UserAdmin:
                 new_user = User(name=self._name, email=self._email, password=pwd_hash)
                 db_session.add(new_user)
                 db_session.commit()
-                res = Response(status='success', msg='Signup succeeds')
+                res = Response(status=1, msg='Signup succeeds')
                 return res.as_json
             else:
-                res = Response(status='failure', msg='email already existed')
+                res = Response(status=3, msg='email already existed')
                 return res.as_json
         else:
-            res = Response(status='failure', msg='Input missing')
+            res = Response(status=2, msg='Input missing')
             return res.as_json
 
     def login(self):
         if self._email and self._password:
             pwd_hash = self._get_hash_pwd()
-            res = Response(status='success', msg='Login succeeds') \
-                if User.query.filter_by(email=self._email, password=pwd_hash).count() == 1 \
-                else Response(status='failure', msg='User not registered or password is incorrect')
+            try:
+                user_logged_in = User.query.filter_by(email=self._email, password=pwd_hash).one()
+                res = Response(status=1, msg='Login succeeds', name=user_logged_in.name)
+            except NoResultFound:
+                res = Response(status=3, msg='User not registered or password is incorrect')
             return res.as_json
         else:
-            res = Response(status='failure', msg='Input missing')
+            res = Response(status=2, msg='Input missing')
             return res.as_json
 
     def _if_user_exists(self):
